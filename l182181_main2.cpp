@@ -8,7 +8,7 @@ void gpaarr(student *arr,student *rarr);
 int main()
 {
     student *darr;//for dynamic array
-    student sarr;//for static array
+    student *sarr;//for static array
 	student arr[3]={student(3,2.0),student(3,3.0),student(4,2.33)};
 	arr[1].addQuizScore(10);
 	arr[1].addQuizScore(4);
@@ -40,6 +40,9 @@ int main()
 	gpaarr(arr2,darr);
 	darr->print();
 	sarr->print();
+	delete []sarr;//deallocation
+	delete []darr;
+	delete []arr2;
 	system("pause");
 	return 0;
 }
